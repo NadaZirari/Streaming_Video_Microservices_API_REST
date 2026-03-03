@@ -52,7 +52,7 @@ public class UserController {
 
     @GetMapping("/{userId}/watchlist")
     public List<WatchlistDTO> getWatchlist(@PathVariable Long userId) {
-        return userService.getWatchlist(userId);
+        return userService.getUserWatchlist(userId);
     }
 
     // History Endpoints

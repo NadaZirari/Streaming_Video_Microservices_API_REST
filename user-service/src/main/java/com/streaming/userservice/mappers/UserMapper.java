@@ -8,7 +8,7 @@ import com.streaming.userservice.entities.Watchlist;
 import com.streaming.userservice.entities.WatchHistory;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", unmappedTargetPolicy = org.mapstruct.ReportingPolicy.IGNORE)
 public interface UserMapper {
     UserDTO toUserDTO(User user);
     User toUserEntity(UserDTO userDTO);
